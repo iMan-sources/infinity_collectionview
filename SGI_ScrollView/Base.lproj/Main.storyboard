@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SGI_ScrollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pb0-B0-tJz">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rj9-S4-Qak" customClass="TimetableView" customModule="SGI_ScrollView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Rj9-S4-Qak" secondAttribute="trailing" id="3Lq-hU-pBC"/>
+                                    <constraint firstItem="Rj9-S4-Qak" firstAttribute="leading" secondItem="pb0-B0-tJz" secondAttribute="leading" id="P1p-Tx-g8G"/>
+                                    <constraint firstItem="Rj9-S4-Qak" firstAttribute="height" secondItem="pb0-B0-tJz" secondAttribute="height" id="Rlb-i8-dSU"/>
+                                    <constraint firstItem="Rj9-S4-Qak" firstAttribute="width" secondItem="pb0-B0-tJz" secondAttribute="width" id="c0W-Nc-Shw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rj9-S4-Qak" secondAttribute="bottom" id="iol-f3-q8c"/>
+                                    <constraint firstItem="Rj9-S4-Qak" firstAttribute="top" secondItem="pb0-B0-tJz" secondAttribute="top" id="sec-JD-kdc"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="5Hq-Fu-TrW"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="PGi-XI-z0d"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pb0-B0-tJz" secondAttribute="bottom" id="61W-JX-bUi"/>
+                            <constraint firstItem="pb0-B0-tJz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gks-D2-zNE"/>
+                            <constraint firstItem="pb0-B0-tJz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HmT-yC-433"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pb0-B0-tJz" secondAttribute="trailing" id="I2B-Qw-peU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerTermView" destination="Rj9-S4-Qak" id="VKY-ft-BNo"/>
+                        <outlet property="scrollView" destination="pb0-B0-tJz" id="gjG-Ug-bCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
